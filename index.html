@@ -17,37 +17,59 @@
             color: #1c1c1e;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
             height: 100vh;
-            overflow: hidden;
         }
         header {
             background-color: #ffffff;
-            border-bottom: 1px solid #e5e5ea;
-            padding: 16px 24px;
+            border: 1px solid #e5e5ea;
+            border-radius: 12px;
+            padding: 32px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
+            gap: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            max-width: 90%;
+            width: 440px;
         }
         h1 {
             font-size: 18pt;
             font-weight: 300;
             letter-spacing: -0.5px;
+            text-align: center;
         }
-        .subtitle {
-            font-size: 11pt;
-            color: #8e8e93;
-            font-weight: 300;
-        }
-        main {
-            flex: 1;
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
             width: 100%;
-            height: calc(100vh - 60px);
+        }
+        .btn-link {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            font-size: 11pt;
+            padding: 12px 16px;
+            border: 1px solid #d1d1d6;
+            border-radius: 6px;
+            background-color: #ffffff;
+            color: #007aff;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .btn-link:hover {
             background-color: #f2f2f7;
         }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
+        .btn-download {
+            background-color: #007aff;
+            color: #ffffff;
+            border-color: #007aff;
+        }
+        .btn-download:hover {
+            background-color: #0051a3;
+            border-color: #0051a3;
         }
     </style>
 </head>
@@ -55,12 +77,21 @@
 
     <header>
         <h1>ராட்சச ரகசியம்</h1>
-        <div class="subtitle">rakshasa-rakasiyam.github.io</div>
+        <div class="controls">
+            <a class="btn-link" 
+               href="https://docs.google.com/viewer?url=https://rakshasa-rakasiyam.github.io/rakasiyam-free-ed-2.pdf&embedded=true" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                Read PDF Version
+            </a>
+            
+            <a class="btn-link btn-download" 
+               href="rakasiyam-free-ed-2.pdf" 
+               download>
+                Download PDF
+            </a>
+        </div>
     </header>
-
-    <main>
-        <iframe src="rakasiyam-free-ed-2.pdf" title="Rakshasa Rakasiyam Free PDF version"></iframe>
-    </main>
 
 </body>
 </html>
